@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    
+    <!-- Setup Document -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheat Sheet - Strings</title>
+
+    <!-- Set up the bane of humanity (jQuery)  -->
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <!-- Set up highlightjs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    
+    <!-- Set up toastr -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Style stuff -->
+    <link defer rel="stylesheet" href="./../styles.css">
+
+</head>
+
+<body>
+    <script defer>
+        document.addEventListener("DOMContentLoaded", function() {
+            const codeElements = document.querySelectorAll(".copyable");
+            codeElements.forEach(codeElement => {
+                codeElement.addEventListener("click", () => {
+                    const codeContents = codeElement.innerText;
+                    navigator.clipboard.writeText(codeContents);
+
+                    toastr.options.progressBar = true;
+                    toastr.success("Copied to clipboard.");
+                });
+            });
+        });
+    </script>
+
+    <main>
+        <h2>Cheat Sheet - Strings</h2>
+        <a href="../">Back to Cheat Sheet Directory</a>
+
+        <section>
+            <h3>Summary</h3>
+            <p>Strings are the way Java stores text- and actually, how most languages store text. This cheat sheet will inform you how to create strings, use escape sequences, and concatenate them as well.</p>
+        </section>
+
+        <section>
+            <h4>Creating Strings</h4>
+            <p>To create a normal string, you simply put it between quotes. You can set it to a variable, or directly use it in a print statement.</p>
+            <pre><code class="language-java copyable">System.out.println("Hello, World!");
+
+// or
+String message = "Hello, World!";
+System.out.println(message);</code></pre>
+            
+        </section>
+        
+        <section>
+            <h4>Escape Sequences</h4>
+            <p>In Java, the way we type certain <i>special</i> characters is using escape sequences. This goes for characters that aren't exactly on your keyboard- like the newline or the tab. It also lets you type characters that mean something important- like quotes or backslashes. Here are some examples.</p>
+            <pre><code class="language-java copyable">System.out.println("Newline: \n");
+System.out.println("Tab: \t");
+System.out.println("Quotes: \"");
+System.out.println("Backslash: \\");</code></pre>
+            <p>Using these escape sequences, we can type in things that aren't exactly normal. We mainly use newlines with this method, because it lets us type multiple lines of text without using new print statements. For example:</p>
+            <pre><code class="language-java copyable">System.out.println("What is 1+1?\n1+1=2");</code></pre>
+            That will put the line "1+1=2" onto the next line in the console, or whatever other method you use to display it.
+        </section> 
+
+        <section>
+            <h4>Concatenation</h4>
+            <p>If you want to add strings together, you concatenate them. To concatenate two strings, do the following:</p>
+            <pre><code class="language-java copyable">String first = "Hello, ";
+String second = "World!";
+String message = first + second; // Hello, World!
+</code></pre>
+
+            <p>You can also concatenate strings and numbers.</p>
+            <pre><code class="language-java copyable">int number = 5;
+String message = "The number is " + number; // The number is 5
+</code></pre>
+
+            <p>But what doesn't work is trying to do math with concatenation. Just like with PEMDAS, you would need parenthesis, or the numbers would be put into the string, like so.</p>
+            <pre><code class="language-java copyable">// Does NOT work
+int number = 40;
+String message = "The number is " + number + 2; // The number is 402
+
+// Works
+int number = 4;
+String message = "The number is " + (number + 2); // The number is 42
+</code></pre>
+        <p>This happens because Java concatenates things left to right, so for the non working example, instead of adding number and 2 then adding that to the string, it adds number to the string and then 2 to the new string.</p>
+        </section>
+
+        <section>
+            <h4>See Also</h4>
+            <ul>
+                <li><a href="./console_output.html">Console output cheat sheet</a></li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>
