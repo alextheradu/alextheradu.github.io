@@ -17,9 +17,9 @@
 <body>
   
   <form id="login-form">
-    <label for="password">Enter Password:</label>
+    <label class="center" for="password">Enter the Magic Word:</label>
     <input type="password" id="password" name="password" required>
-    <button type="submit">Submit</button>
+    <button class="center" type="submit">Submit</button>
   </form>
 
   <div id="protected-content" style="display: none;">
@@ -27,9 +27,9 @@
     <ul>
         <li><p><a href="/subpages/totallynotcoolman/strings.html" style="color:rgb(0, 0, 0);", class="center">Strings Cheatsheet</a></p></h2></li>
         <li><p><a href="/subpages/totallynotcoolman/math.html" style="color:rgb(0, 0, 0);", class="center">Math Cheatsheet</a></p></h2></li>
-        <li><p><a href="/subpages/totallynotcoolman/consoleoutput.html" style="color:rgb(0, 0, 0);", class="center">Console Output Cheatsheet</a></p></h2></li>        
+        <li><p><a href="/subpages/totallynotcoolman/consoleoutput.html" style="color:rgb(0, 0, 0);", class="center">Console Output Cheatsheet</a></p></h2></li> 
       </ul>
-      <p>More will be available later (probably)</p>
+      <p class="center">More will be available later (probably)</p>
   </div>
 
   <script>
@@ -44,7 +44,10 @@
       if (passwordInput === correctPassword) {
         protectedContent.style.display = "block";
       } else {
-        alert("Incorrect password!");
+        function closeWin() {
+            window.close();
+        }
+        closeWin
       }
     });
   </script>
