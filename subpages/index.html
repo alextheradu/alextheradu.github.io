@@ -44,7 +44,8 @@
       if (passwordInput === correctPassword) {
         protectedContent.style.display = "block";
       } else {
-        window.close(); // This will attempt to close the tab
+        alert("Incorrect password. Redirecting...");
+        window.location.href = "about:blank"; // Redirects to a blank page
       }
     });
   </script>
