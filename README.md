@@ -1,10 +1,8 @@
-First of all. Add a README. Its what professionals do
-You describe your project / what its for
+## Alex Radu's Website
 
-Anyway- the issue was with paths
-You need to use paths relative to the file your in
+I made a website to share my HCS projects, Video Production Projects, and other cool stuff. I'm coding it all by myself (I'm a big boy now) and hosting it on GitHub because I don't feel like paying for hosting. 
 
-Say you are in `video-production-projects/index.html`
-If you want to reference that CNAME file
-You would use the path `../CNAME`
-../ means go backward
+
+## Authors
+
+- [@alextheradu](https://www.github.com/alextheradu)
