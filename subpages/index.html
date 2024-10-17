@@ -46,9 +46,7 @@
         protectedContent.style.display = "block";
       } else {
         alert("Incorrect password. Redirecting...");
-        window.onload = function load() {
-        window.close('','_parent','');
-      };
+        window.location.href = "/blank.html"; // Redirects to a blank page
       }
     });
   </script>
