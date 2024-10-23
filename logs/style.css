@@ -14,7 +14,7 @@ body {
     text-align: center;
 }
 h1 {
-    font-size: 75px;
+    font-size: 50px;
   }
 
   h2 {
@@ -105,11 +105,11 @@ h5 {
 .center_border {
   font-family: "Lucida Console", "Courier New", monospace;
   color: rgb(220, 220, 220);
-  line-height: 75px;
+  line-height: 50px;
   border: 2px solid rgb(6, 157, 31);
   border-radius: 15px;
   border-style: solid;
-  border-width: 3px 10px 3px 10px;
+  border-width: 2px 5px 2px 5px;
   font-size: 60px;
 }
 .center_norm
@@ -121,9 +121,6 @@ h5 {
 body {
   margin: 10;
   text-align: center;
-}
-h1 {
-font-size: 30px;
 }
 
 h2 {
