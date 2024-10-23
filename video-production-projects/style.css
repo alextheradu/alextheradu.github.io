@@ -81,3 +81,10 @@ ul {
   li a:hover {
     background-color: #111;
   }
+.center-sticky
+{
+  position: sticky;
+  top: 0;
+  font-family: "Lucida Console", "Courier New", monospace;
+  color: rgb(220, 220, 220);
+}
