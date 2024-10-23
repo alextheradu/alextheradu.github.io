@@ -13,17 +13,24 @@ body {
     margin: 10;
     text-align: center;
 }
+a {
+  color: rgb(220, 220, 220);
+}
 h1 {
     font-size: 45px;
   }
 
   h2 {
     font-size: 20px;
+    font-family: "Lucida Console", "Courier New", monospace;
+  color: rgb(220, 220, 220);
     
   }
   
   p {
     font-size: 30px;
+    font-family: "Lucida Console", "Courier New", monospace;
+  color: rgb(220, 220, 220);
   }
 .button-font
 {
