@@ -7,3 +7,6 @@ function compscionclick() {
 function aboutme() {
     window.location.href = "/about-me/";
     }
+function logs() {
+    window.location.href = "/logs/";
+    }
