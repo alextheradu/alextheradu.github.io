@@ -19,6 +19,7 @@ p.double {
 {
     font-family: "Lucida Console", "Courier New", monospace;
     color: rgb(0, 0, 0);
+    font-weight: 700;
 }
 ul {
     list-style-type: none;
@@ -47,4 +48,27 @@ ul {
   /* Change the link color to #111 (black) on hover */
   li a:hover {
     background-color: #b7b7b7;
+  }
+  button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #cccccc;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #e6e6e6;
+    font-size: 15px;
+  }
+  
+  button:hover {background-color: #dedede}
+  
+  button:active {
+    background-color: #dedede;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
   }
