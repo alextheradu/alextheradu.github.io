@@ -1,28 +1,30 @@
 body {
-  margin: 10;
+  margin: 10px;
   text-align: center;
 }
+
 p.double {
   border-style: double;
 }
+
 h5 {
-  margin: 20;
+  margin: 20px;
   text-align: center;
   font-family: "Lucida Console", "Courier New", monospace;
   color: rgb(255, 255, 255);
   font-size: 15px;
   line-height: 2px;
-  
 }
+
 .leftbody {
-  margin: 10;
+  margin: 10px;
   text-align: left;
   font-family: "Lucida Console", "Courier New", monospace;
   color: rgb(255, 255, 255);
   font-size: 15px;
   line-height: 25px;
-  
 }
+
 .center_border {
   font-family: "Lucida Console", "Courier New", monospace;
   color: rgb(220, 220, 220);
@@ -32,39 +34,35 @@ h5 {
   border-style: solid;
   border-width: 2px 5px 2px 5px;
 }
-.center_norm
-{
+
+.center_norm {
   font-family: "Lucida Console", "Courier New", monospace;
   color: rgb(220, 220, 220);
 }
 
-body {
-  margin: 10;
-  text-align: center;
-}
 h1 {
-font-size: 30px;
+  font-size: 30px;
 }
 
 h2 {
-font-size: 20px;
+  font-size: 20px;
 }
 
 p {
-font-size: 20px;
+  font-size: 20px;
 }
+
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #333;
-}
-ul {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
+
 li {
   float: left;
 }
@@ -81,21 +79,20 @@ li a {
 li a:hover {
   background-color: #111;
 }
-.center-sticky
-{
-position: sticky;
-top: 0;
-font-family: "Lucida Console", "Courier New", monospace;
-color: rgb(220, 220, 220);
+
+.center-sticky {
+  position: sticky;
+  top: 0;
+  font-family: "Lucida Console", "Courier New", monospace;
+  color: rgb(220, 220, 220);
 }
 
-iframe
-{
+iframe {
   filter: invert(85%);
-    background-color: #fff;
-    color:rgb(20,20,20) 
+  background-color: #fff;
+  color: rgb(20, 20, 20);
 }
-.iframe
-{
-  color: rgb(20,20,20)
+
+.iframe {
+  color: rgb(20, 20, 20);
 }
