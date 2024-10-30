@@ -6,7 +6,7 @@ function submit() {
     let chat = document.createElement("p",);
     chat.innerHTML = text;
     div.appendChild(chat);
-    $post("https://blark.it/tcsrw/message_app/fetch_messages.php", {
+    $post("https://blark.it/tcsrw/messages_app/fetch_messages.php", {
         message: text,
         from: "placeholder",
         to: "infotech",
@@ -14,10 +14,10 @@ function submit() {
     )
 }
 
-$.get("https://blark.it/tcsrw/message_app/fetch_messages.php",
+$.get("https://blark.it/tcsrw/messages_app/fetch_messages.php",
     (data) => {
         for(let i = 0; i < data.length; i++) {
-            
+
             let message = document.createElement("p");
 
             message.innerHTML = data[i].message;
