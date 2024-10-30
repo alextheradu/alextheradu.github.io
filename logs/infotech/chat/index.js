@@ -3,13 +3,13 @@ function submit() {
 
     let text = $("#input").val();
 
-    let chat = document.createElement("p",);
+    let chat = document.createElement("p");
     chat.innerHTML = text;
     div.appendChild(chat);
-    $post("https://blark.it/tcsrw/messages_app/fetch_messages.php", {
+    $.post("https://blark.it/tcsrw/messages_app/insert_message.php", {
         message: text,
-        from: "placeholder",
-        to: "infotech",
+        sender: "placeholder",
+        recipient: "infotech",
     },
     )
 }
