@@ -1,5 +1,5 @@
 body {
-    margin: 10;
+    margin: 100;
     text-align: center;
 }
 p.double {
@@ -14,15 +14,7 @@ h5 {
     line-height: 2px;
     
 }
-.leftbody {
-    margin: 10;
-    text-align: left;
-    font-family: "Lucida Console", "Courier New", monospace;
-    color: rgb(255, 255, 255);
-    font-size: 15px;
-    line-height: 25px;
-    
-}
+
 .center_border {
     font-family: "Lucida Console", "Courier New", monospace;
     color: rgb(220, 220, 220);
@@ -80,4 +72,17 @@ ul {
   /* Change the link color to #111 (black) on hover */
   li a:hover {
     background-color: #111;
+  }
+  p{
+    font-size: 20;
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: rgb(255, 255, 255);
+    line-height: 25px;
+    margin: 100;
+    text-align: left;
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: rgb(255, 255, 255);
+    font-size: 17.5px;
+    line-height: 50px;
+    text-indent: 4em;
   }
