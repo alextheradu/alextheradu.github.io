@@ -79,6 +79,7 @@ li a:hover {
 body {
   margin: 10;
   text-align: center;
+  color:rgb(20,20,20);
 }
 p.double {
   border-style: double;
