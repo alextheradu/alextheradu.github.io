@@ -50,9 +50,6 @@ h2 {
 font-size: 20px;
 }
 
-p {
-font-size: 20px;
-}
 ul {
     list-style-type: none;
     margin: 0;
@@ -106,4 +103,12 @@ ul {
   border: 1px solid rgb(20,20,20);
   padding: 20px;
   text-align: center;
+}
+h3
+{
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: auto;
+  font-family: "Lucida Console", "Courier New", monospace;
+  color: rgb(220, 220, 220);
 }
