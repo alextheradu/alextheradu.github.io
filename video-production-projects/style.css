@@ -88,3 +88,22 @@ ul {
   font-family: "Lucida Console", "Courier New", monospace;
   color: rgb(220, 220, 220);
 }
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgb(20,20,20);
+  border: 1px solid rgb(20,20,20);
+  padding: 20px;
+  text-align: center;
+}
+.iframe
+{
+  background-color: rgb(20,20,20);
+  border: 1px solid rgb(20,20,20);
+  padding: 20px;
+  text-align: center;
+}
