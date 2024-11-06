@@ -8,16 +8,26 @@
     <script src="index.js" defer></script>
 </head>
 <body class="light-mode"> <!-- Set initial mode -->
-    <div class="container">
-        <label class="switch">
+    <!-- Header Section -->
+    <header class="header">
+        <!-- Dark Mode Switch -->
+        <label class="switch" aria-label="Toggle Dark Mode">
             <input type="checkbox" id="darkModeToggle">
             <span class="slider"></span>
         </label>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Alex Radu</h1>
+        <h3>Welcome to my website! Here you can find information about me and my projects.</h3>
+        
+        <!-- Button Container -->
+        <div class="button-container">
+            <button class="btn" onclick="location.href='/about-me/'">About Me</button>
+            <button class="btn" onclick="location.href='/projects/'">Projects</button>
+            <button class="btn" onclick="location.href='/subpages/'">Hidden Pages</button>
+        </div>
     </div>
-    <h1>Alex Radu</h1>
-    <h3>Welcome to my homepage! Here you can find information about me and my projects.</h3>
-    <button class="btn" onclick="location.href='/about-me/'">About Me</button>
-    <button class="btn" onclick="location.href='/projects/'">Projects</button>
-    <button class="btn" onclick="location.href='/subpages/'">Hidden Pages</button>
 </body>
 </html>
