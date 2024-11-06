@@ -1,33 +1,44 @@
+/* Apply box-sizing globally */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 /* General Styles */
 body {
     transition: background-color 0.5s, color 0.5s;
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
+    height: 80vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
 }
 
+/* Header Styles */
 .header {
-    position: sticky; /* Makes the header stick to the top */
+    position: sticky;
     top: 0;
     width: 100%;
-    background-color: inherit; /* Inherits the background based on light/dark mode */
+    background-color: inherit; /* Inherits based on light/dark mode */
     display: flex;
-    justify-content: space-between; /* Spaces out navigation and switch */
+    justify-content: flex-end; /* Align switch to the right */
     align-items: center;
-    padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
-    z-index: 1000; /* Ensures the header stays above other content */
+    padding: 10px 20px; /* Sufficient padding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    z-index: 1000; /* Keeps header above other content */
+    overflow: visible; /* Prevents clipping */
+    flex-wrap: wrap; /* Allows content to wrap on small screens */
 }
 
-/* Navigation Buttons Container */
-.nav-buttons {
-    display: flex;
-    gap: 10px; /* Space between buttons */
+/* Responsive Header Adjustments */
+@media (max-width: 480px) {
+    .header {
+        padding: 10px 10px; /* Reduced horizontal padding on small screens */
+        justify-content: center; /* Center the switch on small screens */
+    }
 }
 
 /* Switch Styles */
-/* Ensure existing switch styles are intact */
-/* Example (if not already defined): */
 .switch {
     position: relative;
     display: inline-block;
@@ -83,6 +94,37 @@ input:checked + .slider:before {
     background-color: #f0f0f0;
 }
 
+/* Responsive Switch Adjustments */
+@media (max-width: 480px) {
+    .switch {
+        width: 50px;
+        height: 28px;
+    }
+    
+    .slider:before {
+        height: 22px;
+        width: 22px;
+        left: 3px;
+        bottom: 3px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 320px) {
+    .switch {
+        width: 40px;
+        height: 24px;
+    }
+    
+    .slider:before {
+        height: 18px;
+        width: 18px;
+        left: 2px;
+        bottom: 2px;
+        font-size: 14px;
+    }
+}
+
 /* Light and Dark Mode Styles */
 body.light-mode {
     background-color: rgb(220, 220, 220);
@@ -92,6 +134,17 @@ body.light-mode {
 body.dark-mode {
     background-color: rgb(20, 20, 20);
     color: rgb(220, 220, 220);
+}
+
+/* Main Content Styles */
+.main-content {
+    flex: 1; /* Take up remaining space */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Allow child elements to stretch */
+    justify-content: center; /* Center vertically */
+    padding: 20px; /* Add padding to prevent clipping */
+    text-align: center;
 }
 
 /* Heading Styles */
@@ -104,8 +157,7 @@ h1 {
     color: transparent;
     -webkit-text-fill-color: transparent; /* Ensures text is transparent in WebKit browsers */
     animation: gradientMove 12s linear infinite; /* Smooth left-to-right animation */
-    text-align: center;
-    margin: 20px 0; /* Adjusted margin */
+    margin: 20px 0;
 }
 
 body.dark-mode h1 {
@@ -131,6 +183,7 @@ body.light-mode h1 {
 h3 {
     font-weight: 100;
     text-align: center;
+    margin-bottom: 40px;
 }
 
 /* Gradient Animation */
@@ -144,6 +197,39 @@ h3 {
     100% {
         background-position: 0% 50%;
     }
+}
+
+/* Button Container Styles */
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centers the buttons horizontally */
+    gap: 20px; /* Space between buttons */
+    margin-top: 20px; /* Space above buttons */
+    padding-right: 0; /* Removes right padding to prevent clipping */
+}
+
+/* Responsive Button Container */
+@media (max-width: 600px) {
+    .button-container {
+        justify-content: center; /* Center buttons on small screens */
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px;
+        padding-right: 0; /* Remove right padding */
+    }
+    
+    .btn {
+        width: 100%; /* Make buttons take full width */
+        max-width: 200px; /* Optional: limit maximum width */
+    }
+}
+/* Container for buttons and slider */
+.container {
+    display: flex;
+    justify-content: space-between; /* Space between buttons and slider */
+    align-items: center; /* Center align items vertically */
+    width: 100%;
+    padding: 0px; /* Optional: Add some padding */
 }
 
 /* Button Styles */
@@ -180,11 +266,6 @@ body.dark-mode .btn {
 
 body.dark-mode .btn:hover {
     background: linear-gradient(145deg, #333333, #555555); /* Dark mode hover gradient */
-}
-
-/* Ensure Header and Content Do Not Overlap */
-.container {
-    padding: 20px;
 }
 
 /* Smooth Font Transition */

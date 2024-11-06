@@ -4,26 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hidden Projects</title>
-    <script src-="index.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <!-- <script>
+    <script src-="/subpages/index.js"></script>
+    <link rel="stylesheet" href="/subpages/style.css">
+    <script>
         function checkPassword() {
             var password = prompt("Please enter the password:");
-            if (password === "yourPassword") {
+            if (password === "t") {
                 document.getElementById("content").style.display = "block";
             } else {
                 alert("Incorrect password!");
-                window.location.href = "https://www.example.com"; // Redirect to another page
+                window.location.href = "/blank.html"; // Redirect to another page
             }
         }
         window.onload = checkPassword;
-    </script> -->
+    </script>
 </head>
-<body>
-    <div id="content" style="display:none;">
+<body class="light-mode">
+    <div id="content" style="display:non;">
         <!-- Your protected content goes here -->
-        <h1>Welcome to the protected page!</h1>
-        <p>This content is password protected.</p>
+        <header class="header">
+            <!-- Dark Mode Switch -->
+            <label class="switch" aria-label="Toggle Dark Mode">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider"></span>
+            </label>
+        </header>
+        <h1>Alex Radu</h1>
+        <h3>Welcome to my website! Here you can find information about me and my projects.</h3>
     </div>
 </body>
 </html>
