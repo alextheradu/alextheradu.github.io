@@ -224,6 +224,14 @@ h3 {
       max-width: 200px; /* Optional: limit maximum width */
   }
 }
+/* Container for buttons and slider */
+.container {
+  display: flex;
+  justify-content: space-between; /* Space between buttons and slider */
+  align-items: center; /* Center align items vertically */
+  width: 100%;
+  padding: 0px; /* Optional: Add some padding */
+}
 
 /* Button Styles */
 .btn {
@@ -265,3 +273,10 @@ body.dark-mode .btn:hover {
 h1, h3 {
   transition: color 0.5s, background 0.5s;
 }
+.parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  }
