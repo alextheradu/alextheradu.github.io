@@ -21,13 +21,19 @@ body {
     width: 100%;
     background-color: inherit; /* Inherits based on light/dark mode */
     display: flex;
-    justify-content: flex-end; /* Align switch to the right */
+    justify-content: space-between; /* Space between buttons and switch */
     align-items: center;
     padding: 10px 20px; /* Sufficient padding */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     z-index: 1000; /* Keeps header above other content */
     overflow: visible; /* Prevents clipping */
     flex-wrap: wrap; /* Allows content to wrap on small screens */
+}
+
+/* Navigation Buttons Container */
+.nav-buttons {
+    display: flex;
+    gap: 10px; /* Space between buttons */
 }
 
 /* Responsive Header Adjustments */
@@ -249,6 +255,13 @@ h3 {
     font-size: 16px;
     text-align: center;
     text-decoration: none; /* Ensures buttons have no underline if using <a> tags */
+    display: flex; /* Use flexbox for better alignment */
+    align-items: center; /* Center items vertically */
+    gap: 10px; /* Space between icon and text */
+}
+
+.github-btn img {
+    margin-right: 10px; /* Space between icon and text */
 }
 
 .btn:hover {
