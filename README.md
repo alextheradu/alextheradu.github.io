@@ -8,4 +8,4 @@ I made a website to share my HCS projects, Video Production Projects, and other 
 
 
 ## 📫 How to contact me:
-    1. Email @ cooldudev.super@gmail.com
+    1. Email @ alex@alexradu.co
