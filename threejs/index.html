@@ -3,9 +3,14 @@
 <head>
     <!-- ...existing code... -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/jsm/controls/OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/jsm/lines/LineSegmentsGeometry.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/jsm/lines/LineSegments2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/jsm/lines/LineMaterial.js"></script>
     <!-- ...existing code... -->
 </head>
 <body>
+
     <!-- ...existing code... -->
     <script>
         // Set up the scene, camera, and renderer
@@ -21,6 +26,12 @@
         const cube = new THREE.Mesh(geometry, material);
         scene.add(cube);
 
+        // Create an outline for the cube
+        const edges = new THREE.EdgesGeometry(geometry);
+        const lineMaterial = new THREE.LineBasicMaterial({ color: 0x000000 });
+        const outline = new THREE.LineSegments(edges, lineMaterial);
+        scene.add(outline);
+
         // Position the camera
         camera.position.z = 5;
 
@@ -28,14 +39,26 @@
         function animate() {
             requestAnimationFrame(animate);
 
-            // Rotate the cube for some basic animation
+            // Rotate the cube and its outline for some basic animation
             cube.rotation.x += 0.01;
             cube.rotation.y += 0.01;
+            outline.rotation.x += 0.01;
+            outline.rotation.y += 0.01;
 
             renderer.render(scene, camera);
         }
 
         animate();
+
+        // Add click event listener to h1 element
+        let clickCount = 0;
+        const h1 = document.querySelector('h1');
+        h1.addEventListener('click', () => {
+            clickCount++;
+            if (clickCount === 5) {
+                window.location.href = 'https://example.com';
+            }
+        });
     </script>
     <!-- ...existing code... -->
 </body>

@@ -32,4 +32,14 @@ document.addEventListener('DOMContentLoaded', () => {
             githubIcon.src = '/images/github-mark-white.png'; // Light mode icon
         }
     });
+
+    let clickCount = 0;
+    const heading = document.querySelector('h1');
+
+    heading.addEventListener('click', () => {
+        clickCount++;
+        if (clickCount === 5) {
+            window.location.href = '/unblocked-games/';
+        }
+    });
 });
