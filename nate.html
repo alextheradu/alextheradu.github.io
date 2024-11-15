@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>find da password</title>
+    <link rel="icon" href="./_static/src/browser/media/favicon-dark-support.svg" />
+    <link rel="alternate icon" href="./_static/src/browser/media/favicon.ico" />
+    <link rel="manifest" href="./manifest.json" crossorigin="use-credentials" />
+    <link rel="apple-touch-icon" sizes="192x192" href="./_static/src/browser/media/pwa-icon-192.png" />
+    <link rel="apple-touch-icon" sizes="512x512" href="./_static/src/browser/media/pwa-icon-512.png" />
+    <link href="./_static/src/browser/pages/global.css" rel="stylesheet" />
+    <link href="./_static/src/browser/pages/login.css" rel="stylesheet" />
+    <meta id="coder-options" data-settings="{&quot;base&quot;:&quot;.&quot;,&quot;csStaticBase&quot;:&quot;./_static&quot;,&quot;codeServerVersion&quot;:&quot;4.93.1&quot;}" />
+  </head>
+  <body>
+    <div class="center-container">
+      <div class="card-box">
+        <div class="header">
+          <h1 class="main">Welcome to the Developement Server</h1>
+          <div class="sub">Please log in below. Check the config file at &#x2F;home&#x2F;nate&#x2F;.config&#x2F;code-server&#x2F;config.yaml for the password.</div>
+        </div>
+        <div class="content">
+          <form class="login-form" method="post">
+            <input class="user" type="text" autocomplete="username" />
+            <input id="base" type="hidden" name="base" value="." />
+            <input id="href" type="hidden" name="href" value="" />
+            <div class="field">
+              <input
+                required
+                autofocus
+                class="password"
+                type="password"
+                placeholder="PASSWORD"
+                name="password"
+                autocomplete="current-password"
+              />
+              <input class="submit -button" value="SUBMIT" type="submit" />
+            </div>
+            <div class="error">Incorrect password</div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Inform the backend about the path since the proxy might have rewritten
+      // it out of the headers and cookies must be set with absolute paths.
+      const el = document.getElementById("href")
+      if (el) {
+        el.value = location.href
+      }
+    </script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8e2f5edb48568d11","version":"2024.10.5","r":1,"token":"bc40873ae7cb4b9591604e7c9e545c42","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}}}' crossorigin="anonymous"></script>
+</body>
+</html>
